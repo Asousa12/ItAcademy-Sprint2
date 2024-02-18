@@ -1,0 +1,6 @@
+
+db.createCollection( 'cliente', {validator: {$jsonSchema: {bsonType: 'object',title:'cliente',required: [         'nombre',          'direccion_postal',          'telefono',          'email',          'fecha_registro',          'last_shopping'],properties: {nombre: {bsonType: 'string'},direccion_postal: {bsonType: 'string'},telefono: {bsonType: 'array',items: {bsonType: 'int'}},email: {bsonType: 'string'},fecha_registro: {bsonType: 'string'},last_shopping: {bsonType: 'object',
+title:'object',required: [         'graduacion',          'color_vidrio',          'montura',          'precio'],properties: {graduacion: {bsonType: 'object',
+title:'object',required: [         'ojo_derecho',          'ojo_izquierdo'],properties: {ojo_derecho: {bsonType: 'decimal'},ojo_izquierdo: {bsonType: 'decimal'}}},color_vidrio: {bsonType: 'array',items: {
+title:'object',required: [         'vidrio_derecho',          'vidrio_izquierdo'],properties: {vidrio_derecho: {bsonType: 'string'},vidrio_izquierdo: {bsonType: 'string'}}}},montura: {bsonType: 'object',
+title:'object',required: [         'flotante',          'pasta',          'metalica'],properties: {flotante: {bsonType: 'string'},pasta: {bsonType: 'string'},metalica: {bsonType: 'string'}}},precio: {bsonType: 'decimal'}}}}         }      }});  
